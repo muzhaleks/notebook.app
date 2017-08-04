@@ -40,7 +40,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("NoteBook");
-        this.primaryStage.getIcons().add(new Image("file:src/main/resources/view/notebook.png"));
+        this.primaryStage.getIcons().add(new Image("file:target/classes/view/notebook.png"));
 
         initRootLayout();
         showPersonOverview();
@@ -94,7 +94,7 @@ public class Main extends Application {
 
             Stage dialogStage = new Stage();
             dialogStage.setTitle("Редактировать контакт:");
-            dialogStage.getIcons().add(new Image("file:src/main/resources/view/notebook.png"));
+            dialogStage.getIcons().add(new Image("file:target/classes/view/notebook.png"));
             dialogStage.initModality(Modality.WINDOW_MODAL);
             dialogStage.initOwner(primaryStage);
             Scene scene = new Scene(page);
@@ -196,12 +196,12 @@ public class Main extends Application {
     public void showBirthdayStatistics(){
         try{
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource(" ../view/BirthdayStatistics.fxml"));
+            loader.setLocation(Main.class.getResource("/view/BirthdayStatistics.fxml"));
             AnchorPane page = loader.load();
 
             Stage dialogStage = new Stage();
             dialogStage.setTitle("Статистика Дней Рождения :");
-            dialogStage.getIcons().add(new Image("file:src/main/resources/view/notebook.png"));
+            dialogStage.getIcons().add(new Image("file:target/classes/view/notebook.png"));
             dialogStage.initModality(Modality.WINDOW_MODAL);
             dialogStage.initOwner(primaryStage);
             Scene scene = new Scene(page);
